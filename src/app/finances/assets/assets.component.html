@@ -1,0 +1,50 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-icon" data-background-color="rose">
+                        <i class="material-icons">trending_up</i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Assets</h4>
+                        
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">{{ assetsData.headerRow[0] }}</th>
+                                        <th>{{ assetsData.headerRow[1] }}</th>
+                                        <th>{{ assetsData.headerRow[2] }}</th>
+                                        <th>{{ assetsData.headerRow[3] }}</th>
+                                        <th class="text-right">{{ assetsData.headerRow[4] }}</th>
+                                        <th class="text-right">{{ assetsData.headerRow[5] }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let row of assetsData.dataRows">
+                                        <td class="text-center">{{row[0]}}</td>
+                                        <td>{{row[1]}}</td>
+                                        <td>{{row[2]}}</td>
+                                        <td>&euro; {{row[3]}}</td>
+                                        <td class="td-actions text-right">
+                                            <button type="button" class="btn btn-info {{row[4]}}">
+                                                <i class="material-icons">person</i>
+                                            </button>
+                                            <button type="button" class="btn btn-success {{row[4]}}">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                            <button type="button" class="btn btn-danger {{row[4]}}">
+                                                <i class="material-icons">close</i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
